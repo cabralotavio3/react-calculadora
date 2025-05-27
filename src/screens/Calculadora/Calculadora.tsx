@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
-import Titulo from '../../components/Calculadora/Titulo';
-import Display from '../../components/Calculadora/Display';
-import Botao from '../../components/Calculadora/Botao';
+import Titulo from '../../screens/Calculadora/Titulo';
+import Display from '../../screens/Calculadora/Display';
+import Botao from '../../screens/Calculadora/Botao';
 import { calcular } from '../../services/calculadoraService';
 
 export default function Calculadora() {
@@ -21,25 +21,25 @@ export default function Calculadora() {
         <Botao label="7" onPress={() => adicionar('7')} />
         <Botao label="8" onPress={() => adicionar('8')} />
         <Botao label="9" onPress={() => adicionar('9')} />
-        <Botao label="/" onPress={() => adicionar('/')} color="#FF9800" />
+        <Botao label="/" onPress={() => adicionar('/')} />
       </View>
       <View style={styles.linha}>
         <Botao label="4" onPress={() => adicionar('4')} />
         <Botao label="5" onPress={() => adicionar('5')} />
         <Botao label="6" onPress={() => adicionar('6')} />
-        <Botao label="*" onPress={() => adicionar('*')} color="#FF9800" />
+        <Botao label="*" onPress={() => adicionar('*')}  />
       </View>
       <View style={styles.linha}>
         <Botao label="1" onPress={() => adicionar('1')} />
         <Botao label="2" onPress={() => adicionar('2')} />
         <Botao label="3" onPress={() => adicionar('3')} />
-        <Botao label="-" onPress={() => adicionar('-')} color="#FF9800" />
+        <Botao label="-" onPress={() => adicionar('-')}  />
       </View>
       <View style={styles.linha}>
         <Botao label="0" onPress={() => adicionar('0')} />
-        <Botao label="C" onPress={limpar} color="#f44336" />
-        <Botao label="=" onPress={calcularResultado} color="#4CAF50" />
-        <Botao label="+" onPress={() => adicionar('+')} color="#FF9800" />
+        <Botao label="C" onPress={limpar}  />
+        <Botao label="=" onPress={calcularResultado}  />
+        <Botao label="+" onPress={() => adicionar('+')}  />
       </View>
     </View>
   );

@@ -1,16 +1,16 @@
 import React from 'react';
 import { Text, TouchableOpacity, StyleSheet } from 'react-native';
 
-interface BotaoProps {
+interface botao {
   label: string;
   onPress: () => void;
   flex?: number;
   color?: string;
 }
 
-export default function Botao({ label, onPress, flex = 1, color = '#333' }: BotaoProps) {
+export default function Botao({ label, onPress, flex = 1}: botao) {
   return (
-    <TouchableOpacity style={[styles.botao, { flex, backgroundColor: color }]} onPress={onPress}>
+    <TouchableOpacity style={[styles.botao, { flex }]} onPress={onPress}>
       <Text style={styles.label}>{label}</Text>
     </TouchableOpacity>
   );
@@ -26,6 +26,6 @@ const styles = StyleSheet.create({
   },
   label: {
     fontSize: 24,
-    color: '#fff',
+    color: '#111',
   },
 });

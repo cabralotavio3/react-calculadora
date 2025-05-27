@@ -4,7 +4,7 @@ import { View, Text, StyleSheet } from 'react-native';
 export default function Titulo() {
   return (
     <View style={styles.container}>
-      <Text style={styles.texto}>Calculadora Simples</Text>
+      <Text style={styles.texto}>CALCULADORA</Text>
     </View>
   );
 }
@@ -12,12 +12,11 @@ export default function Titulo() {
 const styles = StyleSheet.create({
   container: {
     padding: 10,
-    backgroundColor: '#6200EE',
+    backgroundColor: '#999',
     alignItems: 'center',
   },
   texto: {
     color: '#fff',
-    fontSize: 24,
-    fontWeight: 'bold',
+    fontSize: 20,
   },
 });
